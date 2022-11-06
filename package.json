@@ -1,7 +1,7 @@
 {
   "name": "sportcademy",
   "version": "0.1.0",
-  "homepage": "https://github.com/Measureit/Sportcademy",
+  "homepage": "https://measureit.github.io/Sportcademy/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
