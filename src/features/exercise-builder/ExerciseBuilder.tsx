@@ -20,6 +20,7 @@ export function ExerciseBuilder() {
 
   return (
     <div>
+      Exercise builder
       <div className={styles.row}>
         <button
           className={styles.button}

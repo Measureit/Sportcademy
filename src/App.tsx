@@ -11,7 +11,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { ExerciseBuilder } from "./features/exercise-builder/ExerciseBuilder";
 import { Home } from "./features/home/Home";
