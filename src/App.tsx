@@ -12,33 +12,14 @@ import { ThemeProvider } from "@mui/material/styles";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
-import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Counter } from "./features/counter/Counter";
 import { ExerciseBuilder } from "./features/exercise-builder/ExerciseBuilder";
 import { Home } from "./features/home/Home";
 import { mainListItems, secondaryListItems } from "./listItems";
 import { AppBar } from "./shared/components/app-bar/AppBar";
 import { Drawer } from "./shared/components/drawer/Drawer";
 import { mdTheme } from "./theme";
-
-function Copyright(props: any) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
 
 function App() {
   const [open, setOpen] = React.useState(true);
@@ -121,7 +102,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/exercise-builder" element={<ExerciseBuilder />} />
               <Route path="/conspect-builder" element={<ExerciseBuilder />} />
-              
+
               <Route
                 path="*"
                 element={
