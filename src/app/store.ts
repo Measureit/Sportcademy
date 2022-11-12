@@ -1,9 +1,15 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
 import counterReducer from '../features/counter/counterSlice';
+import exerciseBuilderReducer from '../features/exercise-builder/exerciseBuilderSlice';
+import homeReducer from '../features/home/homeSlice';
+import trainingBuilderReducer from '../features/training-builder/trainingBuilderSlice';
 
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
+    home: homeReducer,
+    exerciseBuilder:exerciseBuilderReducer,
+    trainingBuilder: trainingBuilderReducer
   },
 });
 
