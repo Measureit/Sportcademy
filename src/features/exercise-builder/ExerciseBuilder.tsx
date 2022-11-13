@@ -1,16 +1,15 @@
-import { useState } from "react";
-
+//import { useState } from "react";
 import { Container, Grid, Paper } from "@mui/material";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { selectCount } from "./exerciseBuilderSlice";
+//import { useAppDispatch, useAppSelector } from "../../app/hooks";
+//import { selectCount } from "./exerciseBuilderSlice";
 import { ToolBar } from "./toolbar/ToolBar";
 
 export function ExerciseBuilder() {
-  const count = useAppSelector(selectCount);
-  const dispatch = useAppDispatch();
-  const [incrementAmount, setIncrementAmount] = useState("2");
+  //const count = useAppSelector(selectCount);
+  //const dispatch = useAppDispatch();
+  //const [incrementAmount, setIncrementAmount] = useState("2");
 
-  const incrementValue = Number(incrementAmount) || 0;
+  //const incrementValue = Number(incrementAmount) || 0;
 
   return (
     <>
