@@ -1,102 +1,59 @@
-//import { useState } from "react";
-import { Container, Grid, Paper } from "@mui/material";
-//import { useAppDispatch, useAppSelector } from "../../app/hooks";
-//import { selectCount } from "./exerciseBuilderSlice";
-import { ToolBar } from "./toolbar/ToolBar";
-
+import { Box, Container, Grid, Paper } from '@mui/material'
+import Split from 'react-split'
+import { CodeEditor } from './code-editor/CodeEditor'
+import './ExerciseBuilder.css'
+import { ToolBar } from './toolbar/ToolBar'
+import { Visualizer } from './visualizer/Visualizer'
 export function ExerciseBuilder() {
-  //const count = useAppSelector(selectCount);
-  //const dispatch = useAppDispatch();
-  //const [incrementAmount, setIncrementAmount] = useState("2");
-
-  //const incrementValue = Number(incrementAmount) || 0;
-
   return (
-    <>
+    // <Split
+    //   className="flex"
+    //   sizes={[20, 60, 20]}
+    //   direction="horizontal"
+    //   style={{ height: `calc(100vh - 4rem)` }}
+    // >
+    //   <div className="bg-gray-300">1</div>
+    //   <div className="bg-gray-300">
+    //     <ToolBar />
+    //   </div>
+    //   <div className="bg-gray-300">3</div>
+    // </Split>
+    <Split direction="vertical" style={{ height: `calc(100vh - 4rem)` }}>
+      <Split className="superflex" >
+      <div className="bluecolor" />
+      <div className="redcolor" />
+      <div className="bluecolor" />
+      </Split>
+      <div className="redcolor" />
+    </Split>
+  )
+  return (
+    <Box
+      component="main"
+      sx={{
+        backgroundColor: (theme) =>
+          theme.palette.mode === 'light' ? theme.palette.grey[100] : theme.palette.grey[900],
+        flexGrow: 1,
+        height: '90vh',
+        overflow: 'auto',
+      }}
+    >
       <ToolBar />
-      <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-        <Grid container spacing={3}>
-          {/* Chart */}
-          <Grid item xs={12} md={8} lg={9}>
-            <Paper
-              sx={{
-                p: 2,
-                display: "flex",
-                flexDirection: "column",
-                height: 240,
-              }}
-            >
-              {/* <Chart /> */}
-            </Paper>
-          </Grid>
-          {/* Recent Deposits */}
-          <Grid item xs={12} md={4} lg={3}>
-            <Paper
-              sx={{
-                p: 2,
-                display: "flex",
-                flexDirection: "column",
-                height: 240,
-              }}
-            >
-              {/* <Deposits /> */}
-            </Paper>
-          </Grid>
-          {/* Recent Orders */}
+      <Container maxWidth={false} sx={{ mt: 2, mb: 2 }}>
+        <Grid container spacing={1}>
           <Grid item xs={12}>
-            <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
-              {/* <Orders /> */}
+            <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height: '43vh' }}>
+              <Visualizer />
+            </Paper>
+          </Grid>
+
+          <Grid item xs={12}>
+            <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height: '35vh' }}>
+              <CodeEditor />
             </Paper>
           </Grid>
         </Grid>
-        {/* <Copyright sx={{ pt: 4 }} /> */}
       </Container>
-    </>
-    // <div>
-    //   Exercise builder
-    //   <div className={styles.row}>
-    //     <button
-    //       className={styles.button}
-    //       aria-label="Decrement value"
-    //       onClick={() => dispatch(decrement())}
-    //     >
-    //       -
-    //     </button>
-    //     <span className={styles.value}>{count}</span>
-    //     <button
-    //       className={styles.button}
-    //       aria-label="Increment value"
-    //       onClick={() => dispatch(increment())}
-    //     >
-    //       +
-    //     </button>
-    //   </div>
-    //   <div className={styles.row}>
-    //     <input
-    //       className={styles.textbox}
-    //       aria-label="Set increment amount"
-    //       value={incrementAmount}
-    //       onChange={(e) => setIncrementAmount(e.target.value)}
-    //     />
-    //     <button
-    //       className={styles.button}
-    //       onClick={() => dispatch(incrementByAmount(incrementValue))}
-    //     >
-    //       Add Amount
-    //     </button>
-    //     <button
-    //       className={styles.asyncButton}
-    //       onClick={() => dispatch(incrementAsync(incrementValue))}
-    //     >
-    //       Add Async
-    //     </button>
-    //     <button
-    //       className={styles.button}
-    //       onClick={() => dispatch(incrementIfOdd(incrementValue))}
-    //     >
-    //       Add If Odd
-    //     </button>
-    //   </div>
-    // </div>
-  );
+    </Box>
+  )
 }
