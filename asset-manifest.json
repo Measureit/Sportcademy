@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Sportcademy/static/css/main.2661f5a1.css",
+    "main.js": "/Sportcademy/static/js/main.d0bc0df4.js",
+    "static/js/496.ae4092ff.chunk.js": "/Sportcademy/static/js/496.ae4092ff.chunk.js",
+    "index.html": "/Sportcademy/index.html",
+    "main.2661f5a1.css.map": "/Sportcademy/static/css/main.2661f5a1.css.map",
+    "main.d0bc0df4.js.map": "/Sportcademy/static/js/main.d0bc0df4.js.map",
+    "496.ae4092ff.chunk.js.map": "/Sportcademy/static/js/496.ae4092ff.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2661f5a1.css",
+    "static/js/main.d0bc0df4.js"
+  ]
+}
