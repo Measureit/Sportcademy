@@ -16,7 +16,7 @@ import * as React from 'react';
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
-export function ToolBar() {
+export function ExerciseToolBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
